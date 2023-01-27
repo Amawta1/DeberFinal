@@ -438,6 +438,7 @@ this.ventanaCantonEliminar = new VentanaCantonEliminar();
                 provinciaServiceImpl.setProvinciaList(provinciaList);
                 
                 var cantonServiceImpl=new CantonServiceImpl();
+                
                 List<Canton> cantonList=cantonServiceImpl.recuperarArchivo("C:/Netbeans1/canton.dat");
                 cantonServiceImpl.setCantonList(cantonList);
             }

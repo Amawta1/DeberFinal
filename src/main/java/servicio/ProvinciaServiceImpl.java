@@ -133,4 +133,14 @@ public class ProvinciaServiceImpl implements ProvinciaService{
         ProvinciaServiceImpl.provinciaList = provinciaList;
     }
     
+    public void ReGrabar() {
+        var Borrarfile = new File("C:/Netbeans1/provincia.dat");
+        Borrarfile.delete();
+
+        for (var i = 0; i < provinciaList.size(); i++) {
+            this.almacenarArchivo(provinciaList.get(i), "C:/Netbeans1/provincia.dat");
+
+        }
+    }
+    
 }

@@ -130,5 +130,11 @@ public class CantonServiceImpl implements CantonService{
     public static void setCantonList(List<Canton> cantonList) {
         CantonServiceImpl.cantonList = cantonList;
     }
+    public void ReGrabar() {
+        var Borrarfile = new File("C:/Netbeans1/canton.dat");
+        Borrarfile.delete();
+
+       
+    }
     
 }

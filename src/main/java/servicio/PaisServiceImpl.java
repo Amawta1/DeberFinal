@@ -6,6 +6,7 @@ package servicio;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -141,7 +142,16 @@ public class PaisServiceImpl implements PaisService {
         PaisServiceImpl.paisList = paisList;
     }
 
-    
+    public void ReGrabar() {
+        var Borrarfile = new File("C:/Netbeans1/pais.dat");
+        Borrarfile.delete();
+
+        for (var i = 0; i < paisList.size(); i++) {
+            this.almacenarArchivo(paisList.get(i), "C:/Netbeans1/pais.dat");
+
+        }
+
+    }
 
     
 }
